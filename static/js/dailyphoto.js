@@ -36,14 +36,14 @@ function capture(video, canvas, image, captureButton, stopButton, snapshotButton
 	};
 
 	var takePhoto = function () {
-		ctx.drawImage(video, 0, 0, 320, 400);
+		ctx.drawImage(video, 0, 0, 320, 240);
 		canvas.style.display = "block";
 		showImage();
 	};
 
 	var showImage = function () {
 		image.src = canvas.toDataURL('image/webp');
-		image.style.display = "block";
+		image.style.display = "none";
 	};
 
 	var stop = function () {
