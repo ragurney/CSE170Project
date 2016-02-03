@@ -62,6 +62,17 @@ function capture(video, canvas, image, captureButton, stopButton, snapshotButton
 	}
 }
 
+function getConfirmation(){
+   var retVal = confirm("Do you want to use this photo for your Photo of the Day?");
+   if( retVal == true ){
+      //document.write ("User wants to use photo!");
+      return true;
+   }
+   else{
+      //document.write ("User does not want to use photo!");
+      return false;
+   }
+}
 
 function init() {
 	var video = document.querySelector('video#getUserMedia');
