@@ -85,5 +85,9 @@ function init() {
 
 	captureButton.onclick = function () {
 		capture(video, canvas, snapshot, captureButton, stopButton, snapshotButton);
+		notie.confirm('Do you want to use this as your Photo of the Day?', 'Yes', 'Cancel', function() 
+                            {
+                                    notie.alert(1, 'Good choice!', 2);
+                            });
 	};
 }
