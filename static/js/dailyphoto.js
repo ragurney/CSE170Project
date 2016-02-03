@@ -1,6 +1,7 @@
 function capture(video, canvas, image, captureButton, stopButton, snapshotButton) {
 	var ctx = canvas.getContext('2d');
 	var localMediaStream = null;
+	var track = null;
 
 	captureButton.disabled = true;
 	stopButton.disabled = false;
@@ -23,7 +24,7 @@ function capture(video, canvas, image, captureButton, stopButton, snapshotButton
 		video.addEventListener("loadedmetadata", function(e) {
 			video.style.display = "block";
 			localMediaStream = mediaStream;
-			console.log(localMediaStream);
+			track = localMediaStream.getTracks()[0];
 			snapshotButton.onclick = function(event) {
 				takePhoto();
 			}
@@ -35,20 +36,19 @@ function capture(video, canvas, image, captureButton, stopButton, snapshotButton
 	};
 
 	var takePhoto = function () {
-		ctx.drawImage(video, 0, 0, 100, 75);
+		ctx.drawImage(video, 0, 0, 320, 400);
 		canvas.style.display = "block";
 		showImage();
 	};
 
 	var showImage = function () {
-		console.log("show image");
 		image.src = canvas.toDataURL('image/webp');
 		image.style.display = "block";
 	};
 
 	var stop = function () {
 		if (localMediaStream) {
-			localMediaStream.getUserMedia().stop(); /* TODO: it doesn't work in Opera Mobile 12 */
+			track.stop(); /* TODO: it doesn't work in Opera Mobile 12 */
 		}
 
 		captureButton.disabled = false;
