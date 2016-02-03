@@ -23,6 +23,7 @@ function capture(video, canvas, image, captureButton, stopButton, snapshotButton
 		video.addEventListener("loadedmetadata", function(e) {
 			video.style.display = "block";
 			localMediaStream = mediaStream;
+			console.log(localMediaStream);
 			snapshotButton.onclick = function(event) {
 				takePhoto();
 			}
@@ -47,7 +48,7 @@ function capture(video, canvas, image, captureButton, stopButton, snapshotButton
 
 	var stop = function () {
 		if (localMediaStream) {
-			localMediaStream.stop(); /* TODO: it doesn't work in Opera Mobile 12 */
+			localMediaStream.getUserMedia().stop(); /* TODO: it doesn't work in Opera Mobile 12 */
 		}
 
 		captureButton.disabled = false;
