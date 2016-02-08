@@ -39,60 +39,28 @@
     onload=window.location='https://cse170-nofilter.herokuapp.com/'-->
 <body id="page-top" class="index">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">#nofilter</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a href="./dailyphoto.html">Daily Photo</a>
-                    </li>
-                    <li>
-                        <a href="./story.html">Story</a>
-                    </li>
-                    <li>
-                        <a href="./statistics.html">Statistics</a>
-                    </li>
-                    <li>
-                        <a href="./settings.html">Settings</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
 
     <!-- Header -->
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Welcome To</div>
-                <div class="intro-heading">#nofilter</div>
-                <a id="dailyphotobutton" href="./dailyphoto.html" class="page-scroll btn btn-xl">Take Your Daily Photo</a><br><br>
-                <a id="storybutton" href="./story.html" class="page-scroll btn btn-xl">See Your Story</a><br><br>
-                <a id="statisticsbutton" href="./statistics.html" class="page-scroll btn btn-xl">View Statistics</a><br><br>
-                <a id="settingsbutton" href="./settings.html" class="page-scroll btn btn-xl">Settings</a><br><br>
-                <a id="contactbutton" href="#contact" class="page-scroll btn btn-xl">Contact</a><br>
-            </div>
+                <div class="intro-lead-in">Welcome</div>
+                <div class="intro-heading">Log In</div>   
+            
+                    <form name="log-in-form" id="userlogin" novalidate>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Username *" id="username" required data-validation-required-message="Please enter your username.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password *" id="password" required data-validation-required-message="Please enter your password.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </form>
+
+                <a id="login" href="./landing.html" class="page-scroll btn btn-xl">Log In</a><br><br>
+                <a id="signup" href="./signup.html" class="page-scroll btn btn-xl">Sign up!</a><br><br>
+                </div>
         </div>
     </header>
     
