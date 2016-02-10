@@ -113,6 +113,7 @@ function init() {
 	};
 }
 
+//ADDED
 window.onload = function() {
 	var picture = localStorage.getItem('image');
 	var image = document.createElement('img');
