@@ -416,6 +416,12 @@ window.onload = function() {
     var image = document.createElement('img');
     image.src = picture;
     document.body.appendChild(image);
+
+    var picture = localStorage.getItem('image2');
+    console.log(picture);
+    var image = document.createElement('img');
+    image.src = picture;
+    document.body.appendChild(image);
 }
 </script>
 
