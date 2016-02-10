@@ -408,4 +408,15 @@
     
 </body>
 
+<script type="text/javascript" src="js/jquery-1.9.1.min.js">
+//ADDED
+window.onload = function() {
+    var picture = localStorage.getItem('image');
+    console.log(picture);
+    var image = document.createElement('img');
+    image.src = picture;
+    document.body.appendChild(image);
+}
+</script>
+
 </html>

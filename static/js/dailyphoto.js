@@ -112,12 +112,3 @@ function init() {
 		capture(video, canvas, snapshot, captureButton, stopButton, snapshotButton);
 	};
 }
-
-//ADDED
-window.onload = function() {
-	var picture = localStorage.getItem('image');
-	console.log(picture);
-	var image = document.createElement('img');
-	image.src = picture;
-	document.body.appendChild(image);
-}
