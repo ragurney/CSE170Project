@@ -35,6 +35,9 @@ function capture(video, canvas, image, captureButton, stopButton, snapshotButton
 				ajax.open("POST",'index.php',false);
 				ajax.setRequestHeader('Content-Type', 'application/upload');
 				ajax.send(dataURL);
+
+				localStorage.setItem('image', dataURL);
+
 				//Confirmation for photo 
 				notie.confirm('Do you want to use this as your Photo of the Day?', 'Yes', 'Cancel', function() 
                 {
@@ -108,4 +111,11 @@ function init() {
 	captureButton.onclick = function () {
 		capture(video, canvas, snapshot, captureButton, stopButton, snapshotButton);
 	};
+}
+
+window.onload = function() {
+	var picture = localStorage.getItem('image');
+	var image = document.createElement('img');
+	image.src = picture;
+	document.body.appendChild(image);
 }
