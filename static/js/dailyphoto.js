@@ -27,7 +27,7 @@ function capture(video, canvas, image, captureButton, stopButton, snapshotButton
 			track = localMediaStream.getTracks()[0];
 			snapshotButton.onclick = function(event) {
 				takePhoto();
-				var dataURL = canvas.toDataURL(image/jpeg);
+				var dataURL = canvas.toDataURL("image/jpeg");
 console.log(dataURL);
 				//Confirmation for photo 
 				notie.confirm('Do you want to use this as your Photo of the Day?', 'Yes', 'Cancel', function() 
