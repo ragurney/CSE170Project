@@ -27,6 +27,8 @@ function capture(video, canvas, image, captureButton, stopButton, snapshotButton
 			track = localMediaStream.getTracks()[0];
 			snapshotButton.onclick = function(event) {
 				takePhoto();
+				var dataURL = canvas.toDataURL();
+console.log(dataURL);
 				//Confirmation for photo 
 				notie.confirm('Do you want to use this as your Photo of the Day?', 'Yes', 'Cancel', function() 
                 {
@@ -78,6 +80,15 @@ function getConfirmation(){
       //document.write ("User does not want to use photo!");
       return false;
    }
+}
+
+function upload(file) {
+  var form = new FormData(),
+      xhr = new XMLHttpRequest();
+
+  form.append('image', file);
+  xhr.open('post', 'server.php', true);
+  xhr.send(form);
 }
 
 function init() {
