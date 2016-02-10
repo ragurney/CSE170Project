@@ -31,6 +31,9 @@ function capture(video, canvas, image, captureButton, stopButton, snapshotButton
 				var dataURL = canvas.toDataURL("image/jpeg");
 				console.log(dataURL);
 				window.open(dataUrl, "toDataURL() image", "width=600, height=200");
+				ajax.open("POST",'testSave.php',false);
+				ajax.setRequestHeader('Content-Type', 'application/upload');
+				ajax.send(canvasData );
 				//Confirmation for photo 
 				notie.confirm('Do you want to use this as your Photo of the Day?', 'Yes', 'Cancel', function() 
                 {
