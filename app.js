@@ -10,7 +10,12 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var story = require('./routes/story');
+<<<<<<< HEAD
 var dailyphoto = require('./routes/dailyphoto');
+=======
+var statistics = require('./routes/statistics');
+
+>>>>>>> 4373445e51ec8219a90ae712f21fc0f08a771e6d
 // Example route
 // var user = require('./routes/user');
 
@@ -39,7 +44,12 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/story', story.renderSlideshow);
+<<<<<<< HEAD
 app.get('/dailyphoto', dailyphoto.renderCamera);
+=======
+app.get('/statistics', statistics.renderStatistics);
+
+>>>>>>> 4373445e51ec8219a90ae712f21fc0f08a771e6d
 // Example route
 // app.get('/users', user.list);
 
