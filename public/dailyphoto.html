@@ -18,12 +18,17 @@
     <!-- Custom CSS -->
     <link href="css/agency.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/dailyphoto.css" type="text/css">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="js/dailyphoto.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,7 +40,7 @@
 </head>
 
 
-<body id="page-top" class="index">
+<body id="page-top" class="index" onload="init()">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -48,7 +53,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="./landing#page-top">#nofilter</a>
+                <a class="navbar-brand page-scroll" href="./landing.html#page-top">#nofilter</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -58,22 +63,22 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a href="./dailyphoto">Daily Photo</a>
+                        <a href="./dailyphoto.html">Daily Photo</a>
                     </li>
                     <li>
-                        <a href="./story">Story</a>
+                        <a href="./story.html">Story</a>
                     </li>
                     <li>
-                        <a href="./statistics">Statistics</a>
+                        <a href="./statistics.html">Statistics</a>
                     </li>
                     <li>
-                        <a href="./settings">Settings</a>
+                        <a href="./settings.html">Settings</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="./landing#contact">Contact</a>
+                        <a class="page-scroll" href="./landing.html#contact">Contact</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="./">Log Out</a>
+                        <a class="page-scroll" href="./index.html#">Log Out</a>
                     </li>
                 </ul>
             </div>
@@ -81,14 +86,31 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    
-    <!-- Settings Section -->
-    <section id="settings">
+
+    <!-- Daily Photo Section -->
+    <section id="dailyphoto">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">settings</h2>
-                    <h3 class="section-subheading text-muted">Customize your settings</h3>
+                    <h2 class="section-heading">Daily Photo</h2>
+                    <h3 class="section-subheading text-muted">Take your daily photo and watch your story grow</h3>
+
+                    <!-- Capture button -->
+                    <p>Tap the "Capture" button to get user media, then tap the "Snapshot!" button to take a screenshot</p>
+                    <div>
+                        <div>
+                            <video id="getUserMedia" width="320" height="240" autoplay></video>
+                            <canvas id="canvas" width="320" height="240"></canvas>
+                            <img id="snapshot" width="320" height="240" src="" alt="snapshot">
+                        </div>
+                        <div style="clear:both"></div>
+                        <form action="javascript:;" method="post">
+                            <button id="captureButton" class="page-scroll btn btn-xl">Capture</button> 
+                            <button id="stopButton" class="page-scroll btn btn-xl">Stop</button> 
+                            <button id="snapshotButton" class="page-scroll btn btn-xl">Snapshot!</button>
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -111,7 +133,10 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
-    
+
+    <!-- Notie JavaScript -->
+    <script src="js/notie.js"></script>
+
 </body>
 
 </html>
