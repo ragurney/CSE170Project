@@ -12,6 +12,7 @@ var index = require('./routes/index');
 var story = require('./routes/story');
 var dailyphoto = require('./routes/dailyphoto');
 var statistics = require('./routes/statistics');
+var landing = require('./routes/landing');
 
 // Example route
 // var user = require('./routes/user');
@@ -43,6 +44,7 @@ app.get('/', index.view);
 app.get('/story', story.renderSlideshow);
 app.get('/dailyphoto', dailyphoto.renderCamera);
 app.get('/statistics', statistics.renderStatistics);
+app.get('/landing', landing.renderHomepage);
 
 // Example route
 // app.get('/users', user.list);
