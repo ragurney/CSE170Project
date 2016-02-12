@@ -31,10 +31,10 @@ function capture(video, canvas, image, captureButton, stopButton, snapshotButton
 				var dataURL = canvas.toDataURL("image/png");
 				console.log(dataURL);
 				window.open(dataURL, "toDataURL() image", "width=600, height=200");
-				var ajax = new XMLHttpRequest();
-				ajax.open("POST",'index.php',false);
-				ajax.setRequestHeader('Content-Type', 'application/upload');
-				ajax.send(dataURL);
+				//var ajax = new XMLHttpRequest();
+				//ajax.open("POST",'index.php',false);
+				//ajax.setRequestHeader('Content-Type', 'application/upload');
+				//ajax.send(dataURL);
 
 				localStorage.setItem('image2', dataURL);
 
