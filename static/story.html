@@ -18,12 +18,16 @@
     <!-- Custom CSS -->
     <link href="css/agency.css" rel="stylesheet">
 
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/story.css" type="text/css">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -82,11 +86,6 @@
         <!-- /.container-fluid -->
     </nav>
     
-
-
-
-
-
     <!-- Portfolio Grid Section -->
     <section id="story">
         <div class="container">
@@ -99,16 +98,9 @@
 
         </div>
 
-
-
-
-
-
 <!-- STORY STUFF -->
-
-
-
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<<<<<<< HEAD
     <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
     <!-- use jssor.slider.debug.js instead for debug -->
     <script>
@@ -336,15 +328,18 @@
         
     </style>
 
+    <div id="title" align="center">
 
+    </div>
+    
     <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 456px; overflow: hidden; visibility: hidden; background-color: #24262e;">
         <!-- Loading Screen -->
         <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
             <div style="position:absolute;display:block;background:url('img/slideshow_img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
-        <div id="slides" data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;">
-            <div data-idle="2000" data-p="144.50" style="display: none;">
+        <div id="slides" class="slides" data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;">
+            <div id="image1" data-p="144.50" style="display: none;">
                 <img data-u="image" src="img/slideshow_img/01.jpg" />
                 <img data-u="thumb" src="img/slideshow_img/thumb-01.jpg" />
             </div>
@@ -417,10 +412,27 @@
         <button id="pausebutton" class="page-scroll btn btn-xl" onclick="pause()">Pause</button>
     </div>
 
+    <!-- Description Section -->
+    <div id="description" align="center">
+        <h4> This is a description of the image </h4>
+        <button id="edit" class="page-scroll btn btn-xl" onclick="edit()">Edit</button>
+    </div>
+
+    <!-- Comment Section -->
+    <div id="commentSection" class="commentSection" align="center" display="none">
+        <form id="comments">
+            <h3>Title</h3>
+            <input id="editTitle" type="text" name="title">
+        
+        <br>
+        <h3> Description </h3>
+        <textarea id="editDescription" rows="4" cols="50" name="description">Enter text here...</textarea>
+        <br>
+        <button id="commentSubmit" class="page-scroll btn btn-xl">Submit</button>
+        </form>
+    </div>
+
 </section>
-
-
- 
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
