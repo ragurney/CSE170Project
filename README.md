@@ -1,3 +1,4 @@
-# CSE170Project
+lab6
+====
 
-
+Lab 6: AJAX
