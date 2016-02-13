@@ -2,7 +2,10 @@ var data = require('../images.json');
 
 exports.renderSlideshow = function(req, res) {
 	console.log(data);
-	res.render('story', {
+
+	res.render('story', data); 
+
+	/*{
 	images: [
 	{
 		"id": "one",
@@ -65,5 +68,5 @@ exports.renderSlideshow = function(req, res) {
 		"thumb": "thumb-12.jpg"
 	},
 	]
-	});
+	});*/
 }
