@@ -1,4 +1,4 @@
-var data = JSON.parse(../images);
+var data = require('../images.json');
 
 function capture(video, canvas, image, captureButton, stopButton, snapshotButton) {
 	var ctx = canvas.getContext('2d');
