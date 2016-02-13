@@ -1,5 +1,3 @@
-var data = require('../images.json');
-
 function capture(video, canvas, image, captureButton, stopButton, snapshotButton) {
 	var ctx = canvas.getContext('2d');
 	var localMediaStream = null;
@@ -32,27 +30,17 @@ function capture(video, canvas, image, captureButton, stopButton, snapshotButton
 				//Added code for saving image
 				var dataURL = canvas.toDataURL("image/png");
 				console.log(dataURL);
-				//window.open(dataURL, "toDataURL() image", "width=600, height=200");
+				window.open(dataURL, "toDataURL() image", "width=600, height=200");
 				//var ajax = new XMLHttpRequest();
 				//ajax.open("POST",'index.php',false);
 				//ajax.setRequestHeader('Content-Type', 'application/upload');
 				//ajax.send(dataURL);
-				
+
+				localStorage.setItem('image2', dataURL);
 
 				//Confirmation for photo 
 				notie.confirm('Do you want to use this as your Photo of the Day?', 'Yes', 'Cancel', function() 
                 {
-                	dataURL.replace(/^data:image\/(png|jpg);base64,/,"");
-					//localStorage.setItem('image2', dataURL);
-					
-	
-					var idN = data["images"].length === 0 ? 0 : data["images"].id+1;  
-					var newPhoto = {
-						"id": idN,
-						"image": "data:image/png;base64," + dataURL, 
-						"thumb": "thumb-01.jpg"
-						}
-					data["images"].push(newPhoto); 
                 	notie.alert(1, 'Good choice!', 2);
                 });
 			}
